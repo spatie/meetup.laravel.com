@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Http\Components\NavigationItemComponent;
+use App\Http\Components\SpeakerComponent;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,6 +16,6 @@ class BladeComponentsServiceProvider extends ServiceProvider
         Blade::component(NavigationItemComponent::class, 'navigation-item');
         Blade::component('components.flash', 'flash');
         Blade::component('components.formFieldError', 'form-field-error');
-        Blade::component('components.speaker', 'speaker');
+        Blade::component(SpeakerComponent::class, 'speaker');
     }
 }

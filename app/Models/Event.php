@@ -15,18 +15,18 @@ class Event extends Model
     public static function featured(): ?Event
     {
         return static::query()
-            ->where('held_at', '>=', now()->subMinutes(30)->toDayDateTimeString())
+            ->where('held_at', '>=', now()->subMinutes(30)->toDateTimeString())
             ->orderBy('held_at')
             ->first();
     }
 
-    public function annoucementTitle(): string
+    public function announcementTitle(): string
     {
-        if ($this->held_at->addHour()->isPast) {
+        if ($this->held_at->addHour()->isPast()) {
             return '';
         }
 
-        if ($this->held_at->isPast) {
+        if ($this->held_at->isPast()) {
             return 'Live now';
         }
 

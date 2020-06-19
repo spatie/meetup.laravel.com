@@ -13,17 +13,17 @@ class SpeakerComponent extends Component
 
     public string $talkTitle;
 
-    public string $abstract;
+    public string $talkAbstract;
 
     public string $photo;
 
     public function __construct(Event $event, int $number)
     {
-        $this->name = $this->{"speaker_{$speakerNumber}_name"};
-        $this->title = $this->{"speaker_{$speakerNumber}_title"};
-        $this->talkTitle = $this->{"speaker_{$speakerNumber}_talk_title"};
-        $this->abstract = $this->{"speaker_{$speakerNumber}_abstract"};
-        $this->photo = $this->{"speaker_{$speakerNumber}_photo"};
+        $this->name = $event->{"speaker_{$number}_name"};
+        $this->title = $event->{"speaker_{$number}_title"};
+        $this->talkTitle = $event->{"speaker_{$number}_talk_title"};
+        $this->talkAbstract = $event->{"speaker_{$number}_talk_abstract"};
+        $this->photo = $event->{"speaker_{$number}_photo"};
     }
 
     public function render()

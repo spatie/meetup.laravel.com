@@ -51,7 +51,7 @@ class Event extends Resource
                 ->sortable()
                 ->rules('max:255'),
 
-            Textarea::make('Talk Title', "speaker_{$number}_talk_abstract")
+            Textarea::make('Abstract', "speaker_{$number}_talk_abstract")
                 ->sortable(),
 
             Image::make('Photo', "speaker_{$number}_photo")
