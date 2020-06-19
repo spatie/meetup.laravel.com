@@ -8,30 +8,29 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 
 class Event extends Resource
 {
     public static $model = \App\Models\Event::class;
 
-    public static $title = 'id';
-
+    public static $title = 'held_at';
 
     public static $search = [
-        'id',
+        'id', 'speaker_1_name','speaker_1_talk_title', 'speaker_2_name','speaker_2_talk_title',
     ];
 
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->sortable()->hide(),
 
             DateTime::make('Held at'),
+            Text::make('YouTube URL', 'youtube_url'),
 
             new Panel('Speaker 1', $this->speakerFields(1)),
 
-            new Panel('Speaker 2', $this->speakerFields(2))
+            new Panel('Speaker 2', $this->speakerFields(2)),
         ];
     }
 

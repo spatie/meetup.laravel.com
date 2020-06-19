@@ -8,6 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Event::class, function (Faker $faker) {
     return [
         'held_at' => $faker->dateTimeBetween('-3 days', '3 days'),
+        'youtube_url' => $faker->url,
 
         'speaker_1_name' => $faker->name,
         'speaker_1_title' => $faker->word,

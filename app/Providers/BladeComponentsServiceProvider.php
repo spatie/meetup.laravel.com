@@ -15,5 +15,6 @@ class BladeComponentsServiceProvider extends ServiceProvider
         Blade::component(NavigationItemComponent::class, 'navigation-item');
         Blade::component('components.flash', 'flash');
         Blade::component('components.formFieldError', 'form-field-error');
+        Blade::component('components.speaker', 'speaker');
     }
 }

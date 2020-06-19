@@ -12,6 +12,7 @@ class CreateEventsTable extends Migration
             $table->id();
 
             $table->timestamp('held_at');
+            $table->string('youtube_url')->nullable();
 
             $table->string('speaker_1_name');
             $table->string('speaker_1_title');
