@@ -1,12 +1,13 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
 {
     public function run()
     {
-        factory(\App\Models\User::class)->create([
+        factory(User::class)->create([
             'email' => 'freek@spatie.be',
         ]);
     }
