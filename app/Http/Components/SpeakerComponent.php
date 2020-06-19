@@ -3,6 +3,7 @@
 namespace App\Http\Components;
 
 use App\Models\Event;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\Component;
 
 class SpeakerComponent extends Component
@@ -23,7 +24,7 @@ class SpeakerComponent extends Component
         $this->title = $event->{"speaker_{$number}_title"};
         $this->talkTitle = $event->{"speaker_{$number}_talk_title"};
         $this->talkAbstract = $event->{"speaker_{$number}_talk_abstract"};
-        $this->photo = $event->{"speaker_{$number}_photo"};
+        $this->photo = Storage::url($event->{"speaker_{$number}_photo"});
     }
 
     public function render()

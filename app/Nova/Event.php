@@ -26,7 +26,7 @@ class Event extends Resource
             ID::make()->sortable()->hide(),
 
             DateTime::make('Held at'),
-            Text::make('YouTube URL', 'youtube_url'),
+            Text::make('YouTube URL', 'youtube_url')->hideFromIndex(),
 
             new Panel('Speaker 1', $this->speakerFields(1)),
 
