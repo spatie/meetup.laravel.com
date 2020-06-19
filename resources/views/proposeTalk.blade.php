@@ -30,64 +30,91 @@
                     lacus arcu.
                 </p>
             </div>
+            <x-flash />
             <div class="mt-12">
-                <form action="#" method="POST" class="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
+                <form method="POST" class="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
+                    @csrf
                     <div>
                         <label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">First
                             name</label>
                         <div class="mt-1 relative rounded-md shadow-sm">
                             <input id="first_name"
-                                   class="form-input py-3 px-4 block w-full transition ease-in-out duration-150"
+                                   name="first_name"
+                                   class="form-input py-3 px-4 block w-full transition ease-in-out duration-150"                    value="{{ old('first_name') }}"
                                    placeholder="John"/>
+
                         </div>
+
+                        <x-form-field-error name="first_name" />
                     </div>
                     <div>
                         <label for="last_name" class="block text-sm font-medium leading-5 text-gray-700">Last
                             name</label>
                         <div class="mt-1 relative rounded-md shadow-sm">
                             <input id="last_name"
+                                   name="last_name"
                                    class="form-input py-3 px-4 block w-full transition ease-in-out duration-150"
+                                   value="{{ old('last_name') }}"
                                    placeholder="Doe"/>
                         </div>
+
+                        <x-form-field-error name="last_name" />
+
                     </div>
                     <div class="sm:col-span-2">
                         <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Email</label>
                         <div class="mt-1 relative rounded-md shadow-sm">
                             <input id="email" type="email"
+                                   name="email"
                                    class="form-input py-3 px-4 block w-full transition ease-in-out duration-150"
+                                   value="{{ old('email') }}"
                                    placeholder="john@example.com"/>
                         </div>
+
+                        <x-form-field-error name="email" />
+
                     </div>
                     <div class="sm:col-span-2">
                         <label for="title" class="block text-sm font-medium leading-5 text-gray-700">Talk Title</label>
                         <div class="mt-1 rounded-md shadow-sm">
                             <input id="title"
+                                   name="title"
                                    class="form-input py-3 px-4 block w-full transition ease-in-out duration-150"
+                                   value="{{ old('title') }}"
                                    placeholder="My Awesome Talk"/>
                         </div>
+
+                        <x-form-field-error name="title" />
+
                     </div>
                     <div class="sm:col-span-2">
                         <label for="length" class="block text-sm font-medium leading-5 text-gray-700">Talk
                             Length</label>
                         <div class="mt-1 relative rounded-md shadow-sm">
-                            <input id="length" class="form-input block w-full py-3 px-4 pr-20"/>
+                            <input value="{{ old('length') }}" id="length" name="length" class="form-input block w-full py-3 px-4 pr-20"/>
                             <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+
               <span class="text-gray-500 sm:text-sm sm:leading-5">
                 Minutes
               </span>
                             </div>
                         </div>
+
+                        <x-form-field-error name="length" />
                     </div>
                     <div class="sm:col-span-2">
                         <label for="abstract" class="block text-sm font-medium leading-5 text-gray-700">Abstract</label>
                         <div class="mt-1 relative rounded-md shadow-sm">
-                            <textarea id="abstract" rows="4"
-                                      class="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150"></textarea>
+                            <textarea id="abstract" rows="4" name="abstract"
+                                      class="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150">{{ old('abstract') }}</textarea>
                         </div>
+
+                        <x-form-field-error name="abstract" />
+
                     </div>
                     <div class="sm:col-span-2">
           <span class="w-full inline-flex rounded-md shadow-sm">
-            <button type="button"
+            <button type="submit"
                     class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:border-red-600 focus:shadow-outline-red active:bg-red-600 transition ease-in-out duration-150">
               Submit
             </button>

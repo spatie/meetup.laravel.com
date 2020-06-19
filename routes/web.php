@@ -6,3 +6,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('propose-talk', [ProposeTalkController::class, 'index'])->name('proposeTalk');
+Route::post('propose-talk', [ProposeTalkController::class, 'store']);
+
