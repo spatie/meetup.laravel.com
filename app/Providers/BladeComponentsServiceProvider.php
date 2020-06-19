@@ -13,7 +13,7 @@ class BladeComponentsServiceProvider extends ServiceProvider
     {
         Blade::component('layouts.main', 'main-layout');
         Blade::component('layouts.components.navigation', 'navigation');
-        Blade::component(NavigationItemComponent::class, 'navigation-item');
+        Blade::component(NavigationItemComponent::class, 'app-navigation-item');
         Blade::component('components.flash', 'flash');
         Blade::component('components.formFieldError', 'form-field-error');
         Blade::component(SpeakerComponent::class, 'speaker');

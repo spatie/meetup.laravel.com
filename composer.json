@@ -13,10 +13,14 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
+        "laravel/horizon": "^4.3",
         "laravel/nova": "^3.6",
         "laravel/tinker": "^2.0",
         "spatie/laravel-flash": "^1.6",
+        "spatie/laravel-honeypot": "^2.2",
         "spatie/laravel-log-dumper": "^1.2",
+        "spatie/laravel-mailcoach": "^2.15",
+        "spatie/laravel-mailcoach-monaco": "^1.1",
         "spatie/laravel-stubs": "^1.1",
         "spatie/laravel-tail": "^4.2"
     },
@@ -60,7 +64,8 @@
             "vendor/bin/php-cs-fixer fix"
         ],
         "post-update-cmd": [
-            "@php artisan nova:publish"
+            "@php artisan nova:publish",
+            "@php artisan vendor:publish --tag mailcoach-assets --force"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

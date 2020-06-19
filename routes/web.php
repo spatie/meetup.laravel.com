@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProposeTalkController;
 use Illuminate\Support\Facades\Route;
 
+Route::mailcoach('mailcoach');
+
 Route::get('/', HomeController::class)->name('home');
 Route::get('events', EventsController::class)->name('events');
 
