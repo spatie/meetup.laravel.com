@@ -40,7 +40,7 @@ return [
      * Here you can configure which template editor Mailcoach uses.
      * By default this is a text editor that highlights HTML.
      */
-    'editor' => \Spatie\MailcoachMonaco\MonacoEditor::class,
+    'editor' => \Spatie\Mailcoach\Support\Editor\TextEditor::class,
 
 
     /*
