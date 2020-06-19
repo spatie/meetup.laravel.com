@@ -1,6 +1,6 @@
 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
     <div class="flex-shrink-0">
-        <img class=" w-full object-cover" src="{{ $photo }}" alt="Speaker photo"/>
+        <img class="w-full object-cover" src="{{ $photo }}" alt="Speaker photo"/>
     </div>
     <div class="flex-1 bg-white p-6 flex flex-col justify-between">
         <div class="flex-1">

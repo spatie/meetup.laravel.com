@@ -13,14 +13,6 @@
                     up your skills.
                 </p>
                 <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-                    @if(optional($event)->youtube_url)
-                        <div class="rounded-md shadow">
-                            <a href="{{ $event->youtube_url }}"
-                               class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:shadow-outline-red transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
-                                View on YouTube
-                            </a>
-                        </div>
-                    @endif
                     <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                         <a href="{{ route('proposeTalk') }}"
                            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-red-500 bg-white hover:text-red-600 focus:outline-none focus:shadow-outline-blue transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
@@ -48,6 +40,18 @@
                     <p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
                         Join us for a bunch of interesting talks!
                     </p>
+
+                    @if($event->youtube_url)
+                        <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+
+                            <div class="rounded-md shadow">
+                                <a href="{{ $event->youtube_url }}"
+                                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:shadow-outline-red transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                                    View on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    @endif
                 </div>
                 <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-none">
                     @if($event->hasSpeaker(1))
