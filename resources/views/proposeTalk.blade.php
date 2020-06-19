@@ -26,12 +26,14 @@
                     Propose a talk
                 </h2>
                 <p class="mt-4 text-lg leading-6 text-gray-500">
-                    Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor
-                    lacus arcu.
+                    Share your knowledge or creation with the Laravel community. We are looking for quality talks around of 30 minutes or less. First-time speakers are welcome!
                 </p>
             </div>
-            <x-flash />
+
             <div class="mt-12">
+
+                <x-flash />
+
                 <form method="POST" class="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
                     @csrf
                     <div>
