@@ -1,29 +1,37 @@
 <x-main-layout>
 
-    @if(request()->get('page') == 1)
-        <h1>Upcoming events</h1>
+    <div class="max-w-2xl mx-auto text-gray-600 px-4">
+        @if(! request()->get('page') || request()->get('page') == 1)
+            <div class="mb-10">
+                <h1 class="text-2xl leading-9 tracking-tight font-extrabold sm:text-3xl sm:leading-10 mb-6">
+                    Upcoming events
+                </h1>
 
-        @if($upcomingEvents->count())
-            <ul>
-                @foreach($upcomingEvents as $event)
-                    <li>{{ $event->held_at->format('Y-m-d') }}</li>
-                @endforeach
-            </ul>
-        @else
-            There are currently no upcoming events
+                @if($upcomingEvents->count())
+                    @foreach($upcomingEvents as $event)
+                        <x-event-listing :event="$event"/>
+                    @endforeach
+                @else
+                    <p>
+                        There are currently no upcoming events
+                    </p>
+                @endif
+            </div>
         @endif
-    @endif
 
-    @if($pastEvents->count())
-        <h1>Past events</h1>
+        @if($pastEvents->count())
+            <div>
+                <h1 class="text-2xl leading-9 tracking-tight font-extrabold sm:text-3xl sm:leading-10 mb-6">
+                    Past events
+                </h1>
 
-        <ul>
-            {{ $pastEvents->links() }}
+                @foreach($pastEvents as $event)
+                    <x-event-listing :event="$event"/>
+                @endforeach
 
-            @foreach($pastEvents as $event)
-                <li>{{ $event->held_at->format('Y-m-d') }}</li>
-            @endforeach
-        </ul>
-    @endif
+                {{ $pastEvents->links() }}
+            </div>
+        @endif
+    </div>
 
 </x-main-layout>
