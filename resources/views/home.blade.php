@@ -66,6 +66,37 @@
         </div>
     @endif
 
+    <div class="max-w-xl mx-auto text-center px-4 mb-8 text-gray-600 text-lg leading-7">
+        <h2 class="text-2xl leading-9 tracking-tight font-extrabold text-gray-600 sm:text-3xl sm:leading-10 mb-8">
+            Your Host
+        </h2>
+
+        <p class="mb-4">
+            <a href="https://twitter.com/freekmurze">
+                <img src="https://www.gravatar.com/avatar/a1b4b398630bbd32b77a82cbc37fae9a?s=200" width="150" class="rounded-full border-4 border-white shadow-lg enlarge inline-block" alt="Freek Van der Herten">
+            </a>
+        </p>
+
+        <h3 class="text-lg leading-9 tracking-tight font-extrabold text-gray-900 sm:text-2xl sm:leading-10 mb-2">
+            Freek Van der Herten
+        </h3>
+
+        <p class="mb-4">
+            Freek Van der Herten is a developer and partner at <a href="https://spatie.be/" class="text-red-500 hover:underline">Spatie</a>, a Belgium-based company specializing in creating Laravel apps.
+        </p>
+        <p class="eading-7 mb-4">
+            The company has an open-source first mentality. Freek and his team have released <a href="https://spatie.be/open-source" class="text-red-500 hover:underline">over 200 packages</a>, that are loved by the community, and which have been downloaded for over 75 million times.
+        </p>
+        <p class="mb-4">
+            Freek also has a passion for spreading his knowledge. In addition to regularly <a href="https://freek.dev/speaking#all-talks" class="text-red-500 hover:underline">speaking</a> at local user groups and some of the world's best conferences, he also publishes posts on PHP, Laravel, and programming in general at <a href="https://freek.dev/originals" class="text-red-500 hover:underline">his well-respected blog</a>.
+        </p>
+        <p>
+            <a href="https://twitter.com/freekmurze" class="text-red-500 hover:underline">
+                @freekmurze
+            </a>
+        </p>
+    </div>
+
     <div class="bg-50">
         <a id="newsletter">
             <div class="max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
