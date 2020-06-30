@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 
 class TalkProposal extends Resource
 {
@@ -50,12 +51,12 @@ class TalkProposal extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Text::make('Abstract')
+            Textarea::make('Abstract')
                 ->sortable()
                 ->hideFromIndex()
                 ->rules('required'),
 
-            Text::make('Additional info')
+            Textarea::make('Additional info')
                 ->sortable()
                 ->hideFromIndex(),
 
