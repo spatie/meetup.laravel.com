@@ -17,6 +17,6 @@ class SubscribeRequest extends FormRequest
 
     public function emailList(): EmailList
     {
-        return EmailList::where('name', 'Meetup')->first();
+        return EmailList::where('name', 'meetup.laravel.com')->first();
     }
 }
