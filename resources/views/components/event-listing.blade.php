@@ -5,9 +5,11 @@
                 <h3 class="text-lg leading-6 font-medium text-gray-900">
                     {{ $event->held_at->format('F d, Y H:i') }} UTC
                 </h3>
-                <a class="text-sm leading-5 text-gray-500" href="{{ $event->calendarLink()->ics() }}">
-                    add to calendar
-                </a>
+                @unless($event->held_at->isPast())
+                    <a class="text-sm leading-5 text-gray-500" href="{{ $event->calendarLink()->ics() }}">
+                        add to calendar
+                    </a>
+                @endunless
             </div>
             <div class="ml-4 mt-4 flex-shrink-0">
                 @if ($event->youtube_url)
