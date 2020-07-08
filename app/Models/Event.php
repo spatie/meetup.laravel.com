@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\CalendarLinks\Link;
 
 class Event extends Model
 {
@@ -55,5 +56,36 @@ class Event extends Model
     public function hasSpeaker(int $number): bool
     {
         return ! empty($this->{"speaker_{$number}_name"});
+    }
+
+    public function hasTalkTitle(int $number): bool
+    {
+        return ! empty($this->{"speaker_{$number}_talk_title"});
+    }
+
+    public function talkTitle(int $number): string
+    {
+        return $this->{"speaker_{$number}_talk_title"};
+    }
+
+    public function calendarLink(): \Spatie\CalendarLinks\Link
+    {
+        $from = $this->held_at;
+        $to = $this->held_at->addHour();
+
+        $talkTitles = [];
+
+        if ($this->hasTalkTitle(1)) {
+            $talkTitles[] = $this->talkTitle(1);
+        }
+
+        if ($this->hasTalkTitle(2)) {
+            $talkTitles[] = $this->talkTitle(2);
+        }
+
+        $link = Link::create('Laravel Worldwide Meetup', $from, $to)
+            ->description(implode(PHP_EOL, $talkTitles));
+
+        return $link;
     }
 }

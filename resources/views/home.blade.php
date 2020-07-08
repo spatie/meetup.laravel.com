@@ -36,6 +36,9 @@
                     <h3 class="text-2xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-3xl sm:leading-10">
                         {{ $event->held_at->format('F d, Y H:i') }} UTC
                     </h3>
+                    <a class="text-gray-500" href="{{ $event->calendarLink()->ics() }}">
+                        add to calendar
+                    </a>
                     <p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
                         Join us for a bunch of interesting talks!
                     </p>
