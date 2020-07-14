@@ -56,7 +56,7 @@
                     @endif
                 </div>
 
-                <div class="mt-12 grid gap-10 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-2xl">
+                <div class="mt-12 grid gap-10 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-5xl">
                     @if($event->hasSpeaker(1))
                         <x-speaker :event="$event" number="1"/>
                     @endif
