@@ -63,7 +63,7 @@
                 <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                     <div class="flex items-center justify-between w-full w-auto">
                         <a href="/">
-                            <img class="h-8 w-auto sm:h-10" src="{{ asset('/img/laravel-logo') }}" alt=""/>
+                            <img class="h-8 w-auto sm:h-10" src="{{ asset('/img/laravel-logo.png') }}" alt="Logo"/>
                         </a>
                     </div>
                 </div>
