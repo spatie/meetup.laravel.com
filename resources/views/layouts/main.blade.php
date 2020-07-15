@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Laravel Worldwide Meetup</title>
 
     <!-- Favicon -->
@@ -19,7 +22,7 @@
     <meta property="og:title" content=" The Laravel Worldwide Meetup"/>
     <meta property="og:description"
           content="Join the official Laravel meetup in the cloud. Learn from various familiar and new speakers. Chat with your fellow artisans."/>
-    <meta property="og:image" content="/meetup.png"/>
+    <meta property="og:image" content="{{ asset('/img/meetup.png') }}"/>
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
@@ -58,7 +61,7 @@
                 <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                     <div class="flex items-center justify-between w-full w-auto">
                         <a href="/">
-                            <img class="h-8 w-auto sm:h-10" src="/laravel-logo.png" alt=""/>
+                            <img class="h-8 w-auto sm:h-10" src="{{ asset('/img/laravel-logo') }}" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -72,9 +75,7 @@
     </div>
 </div>
 
-
 {{ $slot }}
-
 
 <div class="bg-50">
     <div class="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
