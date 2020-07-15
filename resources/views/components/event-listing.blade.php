@@ -5,21 +5,31 @@
                 <h3 class="text-lg leading-6 font-medium text-gray-900">
                     {{ $event->held_at->format('F d, Y H:i') }} UTC
                 </h3>
-                @unless($event->held_at->isPast())
-                    <a class="text-sm leading-5 text-gray-500" href="{{ $event->calendarLink()->ics() }}">
-                        add to calendar
-                    </a>
-                @endunless
             </div>
             <div class="ml-4 mt-4 flex-shrink-0">
+                @unless($event->held_at->isPast())
+                    <span class="inline-flex rounded-md shadow-sm">
+                        <a href="{{ $event->calendarLink()->ics() }}"
+                           class="relative inline-flex items-center px-4 py-2 border-2 border-red-500 text-sm leading-5 font-medium rounded-md text-red-500 hover:text-red-600 bg-white focus:outline-none focus:shadow-outline-indigo focus:border-red-700 active:bg-red-700"
+                           target="_blank">
+                            <x-heroicon-o-calendar class="h-5 w-5 mr-1" />
+
+                            <span class="hidden sm:inline">
+                                Add to calendar
+                            </span>
+                        </a>
+                    </span>
+                @endunless
+
                 @if ($event->youtube_url)
                     <span class="inline-flex rounded-md shadow-sm">
-                                                <a href="{{ $event->youtube_url }}"
-                                                   class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white  bg-red-500 hover:bg-red-600 focus:outline-none focus:shadow-outline-indigo focus:border-red-700 active:bg-red-700"
-                                                   target="_blank">
-                                                    View on Youtube
-                                                </a>
-                                            </span>
+                        <a href="{{ $event->youtube_url }}"
+                           class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:shadow-outline-indigo focus:border-red-700 active:bg-red-700"
+                           target="_blank">
+                            <x-icon-youtube class="h-5 w-5 mr-1" />
+                            View on Youtube
+                        </a>
+                    </span>
                 @endif
             </div>
         </div>
