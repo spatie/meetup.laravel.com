@@ -41,16 +41,16 @@
                         Join us for a bunch of interesting talks!
                     </p>
 
-                    @if ($event->youtube_url)
-                        <div class="mt-5 max-w-xl mx-auto sm:flex sm:justify-center md:mt-8">
-                            <div class="rounded-md shadow">
-                                <a href="{{ $event->calendarLink()->ics() }}"
-                                   class="w-full flex items-center justify-center px-8 py-3 border-2 border-red-500 hover:border-red-600 text-base leading-6 font-medium rounded-md text-red-500 hover:text-red-600 bg-white focus:outline-none focus:shadow-outline-red transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
-                                    <x-heroicon-o-calendar class="h-7 w-7 mr-2" />
-                                    Add to calendar
-                                </a>
-                            </div>
+                    <div class="mt-5 max-w-xl mx-auto sm:flex sm:justify-center md:mt-8">
+                        <div class="rounded-md shadow">
+                            <a href="{{ $event->calendarLink()->ics() }}"
+                               class="w-full flex items-center justify-center px-8 py-3 border-2 border-red-500 hover:border-red-600 text-base leading-6 font-medium rounded-md text-red-500 hover:text-red-600 bg-white focus:outline-none focus:shadow-outline-red transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                                <x-heroicon-o-calendar class="h-7 w-7 mr-2" />
+                                Add to calendar
+                            </a>
+                        </div>
 
+                        @if ($event->youtube_url)
                             <div class="mt-4 sm:mt-0 sm:ml-4 rounded-md shadow">
                                 <a href="{{ $event->youtube_url }}"
                                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:shadow-outline-red transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
@@ -58,8 +58,8 @@
                                     View on YouTube
                                 </a>
                             </div>
-                        </div>
-                    @endif
+                        @endif
+                    </div>
                 </div>
 
                 <div class="mt-12 grid gap-10 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-5xl">
