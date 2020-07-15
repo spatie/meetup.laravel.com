@@ -20,6 +20,7 @@ return "echo '\033[32m" .$message. "\033[0m';\n";
 @macro('deploy')
 startDeployment
 cloneRepository
+runYarn
 generateAssets
 runComposer
 updateSymlinks
@@ -86,6 +87,7 @@ yarn
 @task('generateAssets', ['on' => 'remote'])
 {{ logMessage("🌅  Generating assets…") }}
 cd {{ $newReleaseDir }};
+
 yarn run production -- --progress false
 @endtask
 
