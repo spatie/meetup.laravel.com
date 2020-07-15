@@ -20,9 +20,9 @@ return "echo '\033[32m" .$message. "\033[0m';\n";
 @macro('deploy')
 startDeployment
 cloneRepository
+runComposer
 runYarn
 generateAssets
-runComposer
 updateSymlinks
 optimizeInstallation
 backupDatabase
