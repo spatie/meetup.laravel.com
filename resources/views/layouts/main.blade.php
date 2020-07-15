@@ -13,15 +13,17 @@
     <meta name="msapplication-TileColor" content="#ff2d20">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-
     <meta property="og:title" content=" The Laravel Worldwide Meetup"/>
     <meta property="og:description"
           content="Join the official Laravel meetup in the cloud. Learn from various familiar and new speakers. Chat with your fellow artisans."/>
     <meta property="og:image" content="/meetup.png"/>
 
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
 
