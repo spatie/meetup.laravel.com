@@ -1,15 +1,16 @@
 <x-main-layout>
-
     <x-slot name="extraHeader">
-
-        <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
+        <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 xl:my-28">
             <div class="text-center">
-                <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                    Laravel
-                    <span class="text-red-500">Worldwide Meetup</span>
-                </h2>
-                <p class="mt-3 max-w-sm mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-xl">
-                    Join the official Laravel meetup in the cloud. Learn from various familiar and new speakers. Chat with your fellow artisans.
+                <img class="mx-auto h-32 sm:h-48 lg:h-56 select-none" src="/img/logo-globe.svg" alt="Laravel Meetup Globe">
+                <h1 class="leading-10 font-bold text-gray-900 uppercase">
+                    <img class="mx-auto h-12 sm:h-16 lg:h-20 select-none" src="/img/logo-laravel.svg" alt="Laravel">
+                    <span class="block text-sm sm:text-base lg:text-xl text-gray-900">Worldwide Meetup</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base sm:text-lg text-gray-600 md:mt-5">
+                    Join the official Laravel meetup in the cloud. <br class="hidden sm:block">
+                    Learn from various familiar and new speakers. <br class="hidden sm:block">
+                    Chat with your fellow artisans.
                 </p>
                 <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                     <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
@@ -53,7 +54,7 @@
                         @if ($event->youtube_url)
                             <div class="mt-4 sm:mt-0 sm:ml-4 rounded-md shadow">
                                 <a href="{{ $event->youtube_url }}"
-                                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:shadow-outline-red transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                                   class="w-full flex items-center justify-center px-8 py-3 border border-red-500 text-base leading-6 font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:shadow-outline-red transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                                     <x-icon-youtube class="h-7 w-7 mr-2" />
                                     View on YouTube
                                 </a>
@@ -79,17 +80,14 @@
         <h2 class="text-2xl leading-9 tracking-tight font-extrabold text-gray-600 sm:text-3xl sm:leading-10 mb-8">
             Your Host
         </h2>
-
         <p class="mb-4">
-            <a href="https://twitter.com/freekmurze">
+            <a href="https://twitter.com/freekmurze" target="_blank">
                 <img src="{{ asset('/img/freek.jpg') }}" width="150" class="rounded-full border-4 border-white shadow-lg enlarge inline-block" alt="Freek Van der Herten">
             </a>
         </p>
-
         <h3 class="text-lg leading-9 tracking-tight font-extrabold text-gray-900 sm:text-2xl sm:leading-10 mb-2">
             Freek Van der Herten
         </h3>
-
         <p class="mb-4">
             Freek Van der Herten is a developer and partner at <a href="https://spatie.be/" class="text-red-500 hover:underline">Spatie</a>. Together with his team he has released <a href="https://spatie.be/open-source" class="text-red-500 hover:underline">a great number of packages</a> that are loved by the community.
         </p>
@@ -97,7 +95,7 @@
             He also records <a href="https://laravelpackage.training" class="text-red-500 hover:underline">video courses</a>, and publishes posts on PHP, Laravel, and programming in general on <a href="https://freek.dev/originals" class="text-red-500 hover:underline">his blog</a>.
         </p>
         <p>
-            <a href="https://twitter.com/freekmurze" class="text-red-500 hover:underline">
+            <a href="https://twitter.com/freekmurze" target="_blank" class="text-red-500 hover:underline">
                 @freekmurze
             </a>
         </p>

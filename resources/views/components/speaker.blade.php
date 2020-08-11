@@ -5,7 +5,7 @@
     <div class="flex-1 bg-white p-6 flex flex-col justify-between">
         <div class="flex-1">
             <p class="text-sm leading-5 font-medium text-red-600">
-                <a href="{{ $link }}" class="hover:underline">
+                <a href="{{ $link }}" target="_blank" class="hover:underline">
                     {{ $name }} - {{ $title }}
                 </a>
             </p>
