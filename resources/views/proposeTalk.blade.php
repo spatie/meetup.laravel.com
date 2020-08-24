@@ -1,33 +1,32 @@
 <x-main-layout>
-    <div class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+    <div class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8">
         <div class="relative max-w-xl mx-auto">
-            <svg class="absolute left-full transform translate-x-1/2" width="404" height="404" fill="none"
-                 viewBox="0 0 404 404">
+            <svg class="absolute left-full transform translate-x-1/2"
+                width="404" height="404" fill="none" viewBox="0 0 404 404">
                 <defs>
-                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20"
-                             patternUnits="userSpaceOnUse">
+                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
                         <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"/>
                     </pattern>
                 </defs>
                 <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)"/>
             </svg>
-            <svg class="absolute right-full bottom-0 transform -translate-x-1/2" width="404" height="404" fill="none"
-                 viewBox="0 0 404 404">
+            <svg class="absolute right-full bottom-0 transform -translate-x-1/2"
+                width="404" height="404" fill="none" viewBox="0 0 404 404">
                 <defs>
-                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20"
-                             patternUnits="userSpaceOnUse">
+                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
                         <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"/>
                     </pattern>
                 </defs>
                 <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)"/>
             </svg>
             <div class="text-center">
-                <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+                <h1 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 text-gray-900">
                     Propose a talk
-                </h2>
-                <p class="mt-4 text-lg leading-6 text-gray-500">
-                    Share your knowledge or creation with the Laravel community. We are looking for quality talks around
-                    of 30 minutes or less. First-time speakers are welcome!
+                </h1>
+                <p class="mt-4 text-lg leading-6 text-gray-600">
+                    Share your knowledge or creation with the Laravel community. <br class="hidden sm:block">
+                    We are looking for quality talks around of 30 minutes or less. <br class="hidden sm:block">
+                    <strong>First-time speakers are welcome!</strong>
                 </p>
             </div>
 
