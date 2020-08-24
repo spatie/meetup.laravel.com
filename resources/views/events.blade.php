@@ -5,6 +5,7 @@
                 <h1 class="mb-6 text-2xl font-bold leading-10 tracking-tight text-center sm:text-3xl sm:leading-10 text-gray-900">
                     Upcoming events
                 </h1>
+
                 @if($upcomingEvents->count())
                     @foreach($upcomingEvents as $event)
                         <x-event-listing :event="$event"/>
@@ -31,5 +32,4 @@
             </div>
         @endif
     </div>
-
 </x-main-layout>

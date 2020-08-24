@@ -1,4 +1,5 @@
 <x-main-layout>
+
     <x-slot name="extraHeader">
         <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 xl:my-28">
             <div class="text-center">
