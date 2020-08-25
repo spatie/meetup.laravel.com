@@ -1,3 +1,3 @@
 require('./bootstrap');
 
-import 'alpine';
+import 'alpinejs';
