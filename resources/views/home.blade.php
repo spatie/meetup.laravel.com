@@ -37,7 +37,7 @@
                         {{ $event->announcementTitle() }}
                     </h2>
                     <h3  class="text-2xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-3xl sm:leading-10">
-                        <span x-data x-text="convertUTCDateToLocalDate('{{ $event->held_at }}')"></span>
+                        <span x-data x-text="convertUTCDateToLocalDate('{{ $event->held_at->toAtomString() }}')"></span>
                         <div class="text-gray-500 text-lg font-medium">({{ $event->held_at->format('F d, Y H:i') }} UTC)</div>
                     </h3>
                     <p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
