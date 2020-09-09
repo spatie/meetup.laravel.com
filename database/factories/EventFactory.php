@@ -54,11 +54,11 @@ class EventFactory extends Factory
 
     public function past()
     {
-        return $this->state(fn($faker) => ['held_at' => $this->faker->dateTimeBetween('-3 months', '-1 day')]);
+        return $this->state(fn ($faker) => ['held_at' => $this->faker->dateTimeBetween('-3 months', '-1 day')]);
     }
 
     public function upcoming()
     {
-        return $this->state(fn($faker) => ['held_at' => $this->faker->dateTimeBetween('+5 days', '+10 days')]);
+        return $this->state(fn ($faker) => ['held_at' => $this->faker->dateTimeBetween('+5 days', '+10 days')]);
     }
 }
