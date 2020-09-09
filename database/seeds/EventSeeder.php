@@ -7,8 +7,8 @@ class EventSeeder extends Seeder
 {
     public function run()
     {
-        factory(Event::class, 2)->state('upcoming')->create();
+        Event::factory()->times(2)->upcoming()->create();
 
-        factory(Event::class, 30)->state('past')->create();
+        Event::factory()->times(30)->past()->create();
     }
 }
