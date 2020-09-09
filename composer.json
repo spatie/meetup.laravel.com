@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.4",
-        "blade-ui-kit/blade-heroicons": "^0.1.2",
+        "blade-ui-kit/blade-heroicons": "^0.2.2",
         "blade-ui-kit/blade-icons": "^0.4.3",
         "facade/ignition": "^2.3.6",
         "fideloper/proxy": "^4.2",
@@ -84,6 +84,10 @@
         {
             "type": "composer",
             "url": "https://nova.laravel.com"
+        },
+        {
+            "type": "composer",
+            "url": "https://satis.spatie.be"
         }
     ]
 }
