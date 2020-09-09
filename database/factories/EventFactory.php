@@ -4,13 +4,10 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Event;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
-
-
-
 
 $factory->afterCreating(Event::class, function (Event $event, $faker) {
     $photos = File::allFiles(__DIR__ . '/photos');
@@ -66,11 +63,11 @@ class EventFactory extends Factory
 
     public function past()
     {
-        return $this->state(fn($faker) => ['held_at' => $this->faker->dateTimeBetween('-3 months', '-1 day')]);
+        return $this->state(fn ($faker) => ['held_at' => $this->faker->dateTimeBetween('-3 months', '-1 day')]);
     }
 
     public function upcoming()
     {
-        return $this->state(fn($faker) => ['held_at' => $this->faker->dateTimeBetween('+5 days', '+10 days')]);
+        return $this->state(fn ($faker) => ['held_at' => $this->faker->dateTimeBetween('+5 days', '+10 days')]);
     }
 }
