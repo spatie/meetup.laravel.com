@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>Laravel Worldwide Meetup</title>
+    {{--
     <meta name="title" content="Next event: 28 Sep at 19:00 GMT+1, with Adel Fayzrakhmanov and Yaz Jallad">
+    --}}
     <meta name="description" content="Join the official Laravel meetup in the cloud. Learn from various familiar and new speakers. Chat with your fellow artisans.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
@@ -16,12 +18,18 @@
     <meta name="theme-color" content="#f05252">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url('/') }}?2009">
+    {{--
     <meta property="og:title" content="Next event: 28 Sep at 19:00 GMT+1, with Adel Fayzrakhmanov and Yaz Jallad">
+    --}}
     <meta property="og:description" content="Join the official Laravel meetup in the cloud. Learn from various familiar and new speakers. Chat with your fellow artisans.">
+    {{--
     <meta property="og:image" content="{{ asset('/img/socialcard.jpg') }}">
+    --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ url('/') }}?2009">
+    {{--
     <meta property="twitter:title" content="Next event: 28 Sep at 19:00 GMT+1, with Adel Fayzrakhmanov and Yaz Jallad">
+    --}}
     <meta property="twitter:description" content="Join the official Laravel meetup in the cloud. Learn from various familiar and new speakers. Chat with your fellow artisans.">
     <meta property="twitter:image" content="{{ asset('/img/socialcard.jpg') }}">
     <script defer src="{{ mix('js/app.js') }}"></script>
