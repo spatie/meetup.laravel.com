@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Laravel Worldwide Meetup</title>
-    <meta name="title" content="Next event: 27 Oct at 19:00 UTC, with Ryan Chandler && Liam Hammett | Laravel Worldwide Meetup">
+    <meta name="title" content="Laravel Worldwide Meetup">
     <meta name="description" content="Join the official Laravel meetup in the cloud. Learn from various familiar and new speakers. Chat with your fellow artisans.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
@@ -15,15 +15,21 @@
     <meta name="msapplication-TileColor" content="#f05252">
     <meta name="theme-color" content="#f05252">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url('/') }}?2010">
+    <meta property="og:url" content="{{ url('/') }}">
+    {{--
     <meta property="og:title" content="Next event: 27 Oct at 19:00 UTC, with Ryan Chandler && Liam Hammett | Laravel Worldwide Meetup">
+    --}}
     <meta property="og:description" content="Join the official Laravel meetup in the cloud. Learn from various familiar and new speakers. Chat with your fellow artisans.">
+    {{--
     <meta property="og:image" content="{{ asset('/img/socialcard.jpg') }}">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ url('/') }}?2009">
     <meta property="twitter:title" content="Next event: 27 Oct at 19:00 UTC, with Ryan Chandler && Liam Hammett | Laravel Worldwide Meetup">
+    --}}
     <meta property="twitter:description" content="Join the official Laravel meetup in the cloud. Learn from various familiar and new speakers. Chat with your fellow artisans.">
+    {{--
     <meta property="twitter:image" content="{{ asset('/img/socialcard.jpg') }}">
+    --}}
     <script defer src="{{ mix('js/app.js') }}"></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
