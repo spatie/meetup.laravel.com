@@ -84,7 +84,7 @@
         </h2>
         <p class="mb-4">
             <a href="https://twitter.com/freekmurze" target="_blank">
-                <img src="{{ asset('/img/freek.jpg') }}" width="150" class="rounded-full border-4 border-white shadow-lg enlarge inline-block" alt="Freek Van der Herten">
+                <img src="{{ asset('/img/freek-cartoon.jpg') }}" width="150" class="rounded-full border-4 border-white shadow-lg enlarge inline-block" alt="Freek Van der Herten">
             </a>
         </p>
         <h3 class="text-lg leading-9 tracking-tight font-extrabold text-gray-900 sm:text-2xl sm:leading-10 mb-2">
