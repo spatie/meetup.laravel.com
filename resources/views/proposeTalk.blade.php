@@ -133,10 +133,10 @@
                                 rows="4"
                                 name="additional_info"
                                 placeholder="Anything else you'd like us to know. Could be links to your blog, your GitHub profile, your Twitter handle, ..."
-                                class="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150">{{ old('abstract') }}</textarea>
+                                class="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150">{{ old('additional_info') }}</textarea>
                         </div>
 
-                        <x-form-field-error name="abstract"/>
+                        <x-form-field-error name="additional_info"/>
 
                     </div>
                     <div class="sm:col-span-2">
