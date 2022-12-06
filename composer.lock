@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "884499eee66e4a147f341b8d7354b826",
+    "content-hash": "dfa4360bd68f25b7b5308995cdc36591",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4398,16 +4398,16 @@
         },
         {
             "name": "spatie/laravel-honeypot",
-            "version": "dev-master",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-honeypot.git",
-                "reference": "914c35b960ac0d7cc3a245f4ae215a9273076717"
+                "reference": "3dd4319c3d42a9db2bae30582844528799bb22d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-honeypot/zipball/914c35b960ac0d7cc3a245f4ae215a9273076717",
-                "reference": "914c35b960ac0d7cc3a245f4ae215a9273076717",
+                "url": "https://api.github.com/repos/spatie/laravel-honeypot/zipball/3dd4319c3d42a9db2bae30582844528799bb22d2",
+                "reference": "3dd4319c3d42a9db2bae30582844528799bb22d2",
                 "shasum": ""
             },
             "require": {
@@ -4417,12 +4417,13 @@
                 "illuminate/support": "^8.0",
                 "illuminate/validation": "^8.0",
                 "nesbot/carbon": "^2.0",
-                "php": "^7.4"
+                "php": "^7.4|^8.0",
+                "symfony/http-foundation": "^5.1.2"
             },
             "require-dev": {
                 "orchestra/testbench": "^6.0",
                 "spatie/phpunit-snapshot-assertions": "^4.0",
-                "spatie/test-time": "^1.2"
+                "spatie/test-time": "^1.2.1"
             },
             "type": "library",
             "extra": {
@@ -4455,13 +4456,17 @@
                 "laravel-honeypot",
                 "spatie"
             ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-honeypot/issues",
+                "source": "https://github.com/spatie/laravel-honeypot/tree/3.0.1"
+            },
             "funding": [
                 {
                     "url": "https://spatie.be/open-source/support-us",
                     "type": "custom"
                 }
             ],
-            "time": "2020-10-12T09:06:30+00:00"
+            "time": "2020-11-03T12:56:39+00:00"
         },
         {
             "name": "spatie/laravel-json-api-paginate",
@@ -11594,9 +11599,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "spatie/laravel-honeypot": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
