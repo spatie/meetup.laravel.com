@@ -14,5 +14,3 @@ Route::get('events', EventsController::class)->name('events');
 Route::get('propose-talk', [ProposeTalkController::class, 'index'])->name('proposeTalk');
 Route::post('propose-talk', [ProposeTalkController::class, 'store']);
 
-Route::post('subscribe', SubscribeController::class)->name('subscribe');
-
