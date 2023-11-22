@@ -125,7 +125,7 @@
                     </div>
 
                     <div class="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
-                        <form action="https://spatie.mailcoach.app/subscribe/39740acc-f567-4bef-9539-2f4629ec2afe" method="POST" class="sm:flex">
+                        <form action="https://laravelphp.mailcoach.app/subscribe/07b96e7d-0415-4d82-9aee-1c390201ee7a" method="POST" class="sm:flex">
                             <input type="text" name="name" style="display: none; tab-index: -1;">
                             <input aria-label="Email address" type="email" value="{{ old('email') }}" name="email" required class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out" placeholder="Enter your email" />
                             <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
